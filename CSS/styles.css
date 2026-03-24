@@ -65,20 +65,26 @@ header > a {
 main {
   padding-top: 20px;
 }
+.container-about{
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
 img {
   width: 300px;
   height: 600px;
 }
 .about-me {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 .about-me h1 {
-  margin: 15px;
+  font-size: 55px;
+  margin: 33px;
+  padding: 30px;
 }
 .about-me h2 {
-  font-size: 15px;
+  font-size: 25px;
   margin: 25px;
 }
 .about-me h3 {
@@ -86,14 +92,15 @@ img {
 }
 
 .about-me p {
-  margin: 0 auto;
+  font-size: 20px;
   width: 800px;
 }
 .skills {
   display: flex;
   justify-content: center;
-  align-content: center;
-  gap: 30px;
+  margin-left: -100px;
+  padding: 60px;
+  gap: 120px;
 }
 .skills h3 {
   color: var(--verde);
@@ -119,6 +126,7 @@ img {
   padding: 25px;
 }
 .formulario {
+  margin: 100px;
   background-color: var(--gris);
   border: 2px solid var(--verde);
   padding: 25px;
