@@ -66,34 +66,33 @@ main {
   padding-top: 20px;
 }
 .container-about{
-  max-width: 1000px;
+  max-width:max-content;
   display: flex;
   align-items: center;
-  gap: 150px;
+  gap: 70px;
 }
 img {
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 800px;
 }
 .about-me {
-  margin-bottom: 20px;
 }
 .about-me h1 {
-  font-size: 55px;
-  margin: 33px;
-  padding: 30px;
+  font-size: 40px ;
+  margin-bottom: 40px;
 }
 .about-me h2 {
-  font-size: 25px;
-  margin: 25px;
+  
+  font-size: 30px ;
+  margin-bottom: 40px;
 }
 .about-me h3 {
-  margin: 20px;
+  
+  font-size: 20px ;
+  margin-bottom: 40px;
 }
 
 .about-me p {
-  font-size: 20px;
-  width: 800px;
 }
 .skills {
   display: flex;
@@ -102,9 +101,21 @@ img {
   padding: 60px;
   gap: 120px;
 }
+.skills h2{
+  font-size: 30px;
+  animation: anim 10s infinite;
+
+}
 .skills h3 {
   color: var(--verde);
   margin: 10px;
+}
+@keyframes anim{
+  0%{color:var(--verde)}
+  25%{color: var(--blanco);}
+  50%{color:var(--verde)}
+  75%{color: var(--blanco);}
+  100%{color:var(--verde)}
 }
 .dev {
   border: 2px solid var(--negro);
@@ -118,6 +129,22 @@ img {
 .dev li {
   list-style: none;
   padding: 2px;
+}
+/*ABOUT-ME*/
+.hero{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.about-text{
+  display: block;
+  justify-content: center;
+  margin-bottom: 200px
+}
+.about-text h1{
+}
+.about-text h2{
+  
 }
 /*FORM*/
 .mainForm {
