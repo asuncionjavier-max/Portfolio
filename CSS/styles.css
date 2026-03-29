@@ -26,12 +26,11 @@ body {
   font-size: 15px;
   line-height: 20px;
   width: 100%;
-  max-width: 1200px;
+
 }
+
 header {
   display: flex;
-  flex-direction: inline;
-  flex: 1;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -39,22 +38,50 @@ header {
   background-color: var(--negro);
   width: 100%;
   height: 60px;
-  padding: 10px;
+  padding: 10px 16px;
   border-bottom: 2px solid var(--verde);
 }
+
 header > a {
   color: var(--verde);
-  font-size: 35px;
+  font-size: 28px;
   text-decoration: none;
   transition: color 0.3s ;
 }
 header > a :hover{
-color: #888;
+  color: #888;
 }
-.menu {
+/*Hamburguesa en movil*/
+.menu-icon {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 101;
 }
+.menu-icon .line{
+  width: 30px;
+  height: 3px;
+  background-color: var(--blanco);
+  margin: 5px 0;
+animation: anim 10s infinite;
+}
+#menu-toggle{
+  display: none;
+  } 
+  /* Menu oculto en movil*/
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--negro);
+  padding: 20px;
+  gap: 20px;
+  border-bottom: 2px solid var(--verde);
+}
+#menu-toggle:checked ~ .menu{display: flex;}
 .menu a {
   color: var(--blanco);
   text-transform: uppercase;
@@ -67,61 +94,63 @@ color: #888;
 }
 /*Main*/
 main {
-  padding-top: 20px;
+  padding-top: 70px;
 }
 .container-about{
-  max-width: 1200px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 70px;
+  gap: 24px;
+  padding: 24px 16px;
 }
 img {
-  width: 400px;
-  height: 800px;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .about-me{
-  transform: translateY(-70px);
+ text-align: center;
 }
 .about-me h1 {
-  font-size: 40px ;
-  margin-bottom: 40px;
+  font-size: 28px ;
+  margin-bottom: 20px;
 }
 .about-me h2 {
-  
-  font-size: 30px ;
-  margin-bottom: 40px;
+  font-size: 20px ;
+  margin-bottom: 16px;
 }
 .about-me h3 {
-  
-  font-size: 20px ;
-  margin-bottom: 40px;
+  font-size: 16px ;
+  margin-bottom: 16px;
 }
 
 .skills {
   display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  gap: 120px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 16px;
 }
 .skills h2{
-  font-size: 30px;
+  font-size: 24px;
   animation: anim 10s infinite;
 
 }
 .skills h3 {
   color: var(--verde);
-  margin: 10px;
+  margin: 10px 0;
 }
 .dev {
   border: 2px solid var(--negro);
   transition: border 0.3s;
-  scale: 1;
   padding: 15px;
+  width: 100%;
 
 }
 .dev:hover {
-  border: 2px solid var(--verde);
-  scale: 1.2;
+  border: 5px solid var(--verde);
 }
 .dev li {
   list-style: hangul-consonant;;
@@ -236,4 +265,11 @@ footer ul {
 footer nav ul a {
   text-decoration: none;
   color: var(--blanco);
+}
+/*MEDIAQUERYS*/
+@media screen and (max-width: 768px){
+.hero{
+  display: flex;
+  justify-content: center;
+}
 }
