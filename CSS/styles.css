@@ -48,7 +48,7 @@ header > a {
   text-decoration: none;
   transition: color 0.3s ;
 }
-header > a :hover{
+header > a:hover{
   color: #888;
 }
 /*Hamburguesa en movil*/
@@ -63,7 +63,6 @@ header > a :hover{
   height: 3px;
   background-color: var(--blanco);
   margin: 5px 0;
-animation: anim 10s infinite;
 }
 #menu-toggle{
   display: none;
@@ -104,8 +103,7 @@ main {
   padding: 24px 16px;
 }
 img {
-  width: 100%;
-  max-width: 340px;
+  width: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -113,15 +111,15 @@ img {
 .about-me{
  text-align: center;
 }
-.about-me h1 {
+h1 {
   font-size: 28px ;
   margin-bottom: 20px;
 }
-.about-me h2 {
+h2 {
   font-size: 20px ;
   margin-bottom: 16px;
 }
-.about-me h3 {
+h3 {
   font-size: 16px ;
   margin-bottom: 16px;
 }
@@ -129,6 +127,7 @@ img {
 .skills {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
   align-items: center;
   margin-top: 40px;
   padding: 0 16px;
@@ -145,8 +144,8 @@ img {
 .dev {
   border: 2px solid var(--negro);
   transition: border 0.3s;
-  padding: 15px;
-  width: 100%;
+  padding: 20px;
+  width: 50%;
 
 }
 .dev:hover {
@@ -157,6 +156,11 @@ img {
   padding: 2px;
 }
 .proyectos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 16px;
   animation: anim 10s infinite;
 }
 @keyframes anim{
@@ -169,18 +173,17 @@ img {
 /*ABOUT-ME*/
 .hero{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
+  padding:24px 16px;
 }
 .about-text{
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 200px
+text-align: center;
 }
 .box-text{
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .text{
@@ -188,7 +191,6 @@ img {
   flex-direction: column;
   border: 2px solid var(--negro);
   transition: border 0.3s;
-  scale: 1;
   padding: 10px;
   margin: 10px;
 }
@@ -197,20 +199,19 @@ img {
 }
 .text:hover {
   border: 2px solid var(--verde);
-  scale: 1.2;
 }
 
 /*FORM*/
 .mainForm {
   display: flex;
   justify-content: center;
-  padding: 25px;
+  padding: 16px;
 }
 .formulario {
-  margin: 100px;
+  margin: 50px 0;
   background-color: var(--gris);
   border: 2px solid var(--verde);
-  padding: 25px;
+  padding: 20px;
   width: 100%;
   transition: background-color 0.3s;
 }
@@ -218,7 +219,7 @@ img {
   background-color: #0a0a0a;
 }
 .legend {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--verde);
   letter-spacing: 1px;
 }
@@ -237,39 +238,104 @@ img {
   gap: 10px;
 }
 .field label {
-  margin-top: 25px;
-  font-size: 22px;
+  margin-top: 20px;
+  font-size: 18px;
   color: #888;
 }
 .field input {
-  padding: 21px 14px;
+  padding: 16px 14px;
+  width: 100%;
 }
 .boton {
   height: 40px;
-  width: 80px;
+  width: 100%;
   background-color: var(--verde);
+  cursor: pointer;
 }
 
 /*Footer*/
 footer nav {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 16px;
 }
 footer ul {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   list-style: none;
 }
 footer nav ul a {
   text-decoration: none;
   color: var(--blanco);
 }
-/*MEDIAQUERYS*/
-@media screen and (max-width: 768px){
+/* ===================*/
+/*MEDIA QUERYS TABLET*/
+/* ===================*/
+@media screen and (min-width: 768px){
+
+  /*ocultar hamburguesa*/
+  .menu-icon{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    gap:32px
+  }
+  /*Imagen + Texto*/
+.container-about{
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 40px 48px;
+  gap: 40px;
+}
+.imagen{
+  width: 300px;
+  flex-shrink: 0  ;
+}
+img {
+  max-width: 100%;
+}
+.about-me{
+  text-align: left;
+}
+.dev {
+  border: 2px solid var(--negro);
+  transition: border 0.3s;
+  padding: 20px;
+  width: 100%; 
+}
+/*SOBRE-MI*/
 .hero{
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 40px 48px;
+}
+.about-text{
+  text-align: left;
+}
+}
+/* ===================*/
+/*MEDIA QUERYS DESKTOP*/
+/* ===================*/
+@media screen and ( min-width: 1024px) {
+  header{
+    padding: 10px 64px;
+  }
+  .container-about{
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 120px;
 }
 }
