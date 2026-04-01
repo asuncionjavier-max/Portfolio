@@ -26,7 +26,11 @@ body {
   font-size: 15px;
   line-height: 20px;
   width: 100%;
+}
 
+.dark-mode{
+  background-color: var(--blanco);
+  color: var(--negro);
 }
 
 header {
@@ -50,6 +54,10 @@ header > a {
 }
 header > a:hover{
   color: #888;
+}
+.dark-light{
+  width: 25px;
+  height: 25px;
 }
 /*Hamburguesa en movil*/
 .menu-icon {
@@ -105,8 +113,8 @@ main {
 img {
   width: 50%;
   height: auto;
-  display: block;
   margin: 0 auto;
+
 }
 .about-me{
  text-align: center;
@@ -131,6 +139,7 @@ h3 {
   align-items: center;
   margin-top: 40px;
   padding: 0 16px;
+  gap: 20px;
 }
 .skills h2{
   font-size: 24px;
@@ -142,14 +151,11 @@ h3 {
   margin: 10px 0;
 }
 .dev {
-  border: 2px solid var(--negro);
-  transition: border 0.3s;
+  border: 2px solid var(--verde);
   padding: 20px;
   width: 50%;
+  gap: 20px;
 
-}
-.dev:hover {
-  border: 5px solid var(--verde);
 }
 .dev li {
   list-style: hangul-consonant;;
@@ -183,22 +189,18 @@ text-align: center;
 }
 .box-text{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 40px;
 }
 .text{
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--negro);
-  transition: border 0.3s;
-  padding: 10px;
+  border: 2px solid var(--verde );
+  padding: 24px;
   margin: 10px;
 }
 .text li{
   list-style:hangul-consonant;
-}
-.text:hover {
-  border: 2px solid var(--verde);
 }
 
 /*FORM*/
@@ -208,11 +210,12 @@ text-align: center;
   padding: 16px;
 }
 .formulario {
-  margin: 50px 0;
+  margin: 100px 0;
   background-color: var(--gris);
   border: 2px solid var(--verde);
   padding: 20px;
-  width: 100%;
+  width: 50%;
+  height: 50%;
   transition: background-color 0.3s;
 }
 .formulario:hover {
@@ -249,6 +252,7 @@ text-align: center;
 .boton {
   height: 40px;
   width: 100%;
+  border-radius: 20px;
   background-color: var(--verde);
   cursor: pointer;
 }
@@ -278,19 +282,7 @@ footer nav ul a {
 @media screen and (min-width: 768px){
 
   /*ocultar hamburguesa*/
-  .menu-icon{
-    display: none;
-  }
-  .menu{
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    gap:32px
-  }
+
   /*Imagen + Texto*/
 .container-about{
   flex-direction: row;
@@ -328,6 +320,26 @@ img {
 /*MEDIA QUERYS DESKTOP*/
 /* ===================*/
 @media screen and ( min-width: 1024px) {
+    .menu-icon{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    gap:32px
+  }
+  .imagen{
+    scale: 1;
+    transition: scale 0.3s;
+  }
+  .imagen:hover{
+    scale: 1.6;
+  }
   header{
     padding: 10px 64px;
   }
@@ -338,4 +350,20 @@ img {
   gap: 60px;
   padding: 60px 120px;
 }
+/*SKILLS*/
+.dev {
+  border: 2px solid var(--negro);
+  transition: border 0.3s;
+}
+.dev:hover {
+  border: 5px solid var(--verde);
+}
+}
+/*SOBRE MI*/
+.text{
+  border: 2px solid var(--negro);
+  transition: border 0.3s;
+}
+.text:hover {
+  border: 2px solid var(--verde);
 }
