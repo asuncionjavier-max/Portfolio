@@ -27,12 +27,6 @@ body {
   line-height: 20px;
   width: 100%;
 }
-
-.dark-mode{
-  background-color: var(--blanco);
-  color: var(--negro);
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -54,6 +48,18 @@ header > a {
 }
 header > a:hover{
   color: #888;
+}
+.light-mode{
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+.light-mode header{
+  background: var(--blanco);
+}
+.light-mode a{
+  color: var(--negro) !important;
+    transition: color 0.3s;
+
 }
 .dark-light{
   width: 25px;
@@ -109,6 +115,9 @@ main {
   align-items: center;
   gap: 24px;
   padding: 24px 16px;
+}
+.imagen{
+  display: flex;
 }
 img {
   width: 50%;
@@ -174,6 +183,13 @@ h3 {
   25%{color: var(--blanco);}
   50%{color:var(--verde)}
   75%{color: var(--blanco);}
+  100%{color:var(--verde)}
+}
+@keyframes anim-light{
+  0%{color:var(--verde)}
+  25%{color: var(--negro);}
+  50%{color:var(--verde)}
+  75%{color: var(--negro);}
   100%{color:var(--verde)}
 }
 /*ABOUT-ME*/
@@ -336,9 +352,10 @@ img {
   .imagen{
     scale: 1;
     transition: scale 0.3s;
+    margin-left: 60px;
   }
   .imagen:hover{
-    scale: 1.6;
+    scale: 1.6  ;
   }
   header{
     padding: 10px 64px;
@@ -360,6 +377,9 @@ img {
 }
 }
 /*SOBRE MI*/
+.hero{
+  padding-top: 65px;
+}
 .text{
   border: 2px solid var(--negro);
   transition: border 0.3s;
