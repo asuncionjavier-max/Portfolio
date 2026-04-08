@@ -58,8 +58,15 @@ header > a:hover{
 }
 .light-mode a{
   color: var(--negro) !important;
-    transition: color 0.3s;
 
+}
+.light-mode .menu-icon{
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+.light-mode .menu{
+  background-color: var(--blanco);
+  color: var(--negro) !important
 }
 .dark-light{
   width: 25px;
@@ -192,6 +199,7 @@ h3 {
   75%{color: var(--negro);}
   100%{color:var(--verde)}
 }
+
 /*ABOUT-ME*/
 .hero{
   display: flex;
