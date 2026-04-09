@@ -157,25 +157,19 @@ h3 {
   padding: 0 16px;
   gap: 20px;
 }
-.skills h2{
-  font-size: 24px;
-  animation: anim 10s infinite;
-
+.skill-title{
+    animation: anim 10s infinite;
 }
-.skills h3 {
-  color: var(--verde);
-  margin: 10px 0;
+.skill-subtitle{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
 }
-.dev {
-  border: 2px solid var(--verde);
-  padding: 20px;
-  width: 50%;
-  gap: 20px;
-
-}
-.dev li {
-  list-style: hangul-consonant;;
-  padding: 2px;
+.skill-Card{
+  border: #39ff14 2px, solid;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
 }
 .proyectos{
   display: flex;
@@ -324,12 +318,6 @@ img {
 .about-me{
   text-align: left;
 }
-.dev {
-  border: 2px solid var(--negro);
-  transition: border 0.3s;
-  padding: 20px;
-  width: 100%; 
-}
 /*SOBRE-MI*/
 .hero{
   flex-direction: row;
@@ -376,12 +364,25 @@ img {
   padding: 60px 120px;
 }
 /*SKILLS*/
-.dev {
-  border: 2px solid var(--negro);
-  transition: border 0.3s;
+.skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  scale: 1;
 }
-.dev:hover {
-  border: 5px solid var(--verde);
+.skill-title{
+  display: flex;
+  justify-content: center;
+  font-size: 25px ;
+}
+.skills img{
+  width: 100px;
+  height: auto;
+}
+
+.skills :hover{
+  scale: 1.2;
+
 }
 }
 /*SOBRE MI*/

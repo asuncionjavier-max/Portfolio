@@ -1,8 +1,12 @@
-import {skills} from "JS/data"
-function skillsList(){
-    const skills = document.getElementById("skills");
-    skills.innerHTML = `<div><h1>${DeveloperSkills[0]}</h1></div>`
-console.log("funciona")
+import {DeveloperSkills, MarketingSkills} from "../data/skills.js"
+export function renderSkillsDev(){
+    const skillsContainer = document.getElementById("skills-dev")
+    skillsContainer.innerHTML = DeveloperSkills.map(skill =>`<div class="skill-Card" ><h1>${skill.name}</h1><img src="${skill.icon}"><p>${skill.level}<p/></div>`   
+    ).join("")
 }
 
-skillsList()
+export function  renderSkillsMark(){
+    const skillMarketing = document.getElementById("skills-mark")
+        skillMarketing.innerHTML = MarketingSkills.map(skill =>`<div class="skill-Card" ><h1>${skill.name}</h1><img src="${skill.icon}"> <p>${skill.level}<p/></div>`).join("")
+    
+}
