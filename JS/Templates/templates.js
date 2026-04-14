@@ -10,11 +10,12 @@ export function inyectarHeader(){
           <div class="line"></div>
         </label>
         <nav class="menu">
-          <a href="#" id="dark-light"><img class="dark-light" id="icono-visual" src="https://res.cloudinary.com/dbsvmqrm6/image/upload/v1775079674/sun-white-icon-vector_ppjaus.jpg" alt="modo claro o ocurso"></a>
-          <a href="sobre-mi.html" target="_blank" rel="noopener">Sobre mi</a>
-          <a href="#skills">Skills</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="form.html" target="_blank"rel="noopener" class="contact">Contacto</a>
+        <a href="sobre-mi.html" target="_blank" rel="noopener">Sobre mi</a>
+        <a href="#skills">Skills</a>
+        <a href="#Cheatsheet">Cheatsheet</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="form.html" target="_blank"rel="noopener" class="contact">Contacto</a>
+        <a href="#" id="dark-light"><img class="dark-light" id="icono-visual" src="https://res.cloudinary.com/dbsvmqrm6/image/upload/v1775079674/sun-white-icon-vector_ppjaus.jpg" alt="modo claro o ocurso"></a>
         </nav>
       </header>`
 }

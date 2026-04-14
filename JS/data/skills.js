@@ -15,6 +15,12 @@ export const DeveloperSkills = [
         level: "Level: Low",
     },
     {
+        name: "Git",
+        icon:"https://cdn.simpleicons.org/git",
+        level:"Level: Low"
+
+    },
+    {
         name: "Github",
         icon : "https://cdn.simpleicons.org/github",
         level: "Level: Medium",
@@ -25,8 +31,8 @@ export const MarketingSkills = [
         icon:"https://cdn.simpleicons.org/google/F54927",
         level: "Level: Low",
         },
-        { name: "Pack Adobe",
-        icon: "https://res.cloudinary.com/dbsvmqrm6/image/upload/v1775749792/Adobe_Creative_Cloud_rainbow_icon.svg_s1gdgr.png",
+        { name: "Qlik",
+        icon: "https://cdn.simpleicons.org/qlik",
         level: "Level: Medium"
         },
         { name: "Facebook Ads",
