@@ -1,6 +1,10 @@
-import{cheatsheetLenguajes}from"../data/cheatsheet"
+import{cheatsheetLenguajes}from"../data/cheatsheet.js"
 
-function cheatsheetLenguajesFunc(){
+export function cheatsheetLenguajesFunc(){
     const cheatsheet = document.getElementById('lenguaje');
-    cheatsheet.innerHTML = cheatsheetLenguajes.map(skill=>`<a href=${skill.url}<h1>${skill.name}</h1> <img src=${skill.icon}>`).join("")
+    cheatsheet.innerHTML = cheatsheetLenguajes.map(skill=>`
+        <div class="skill-Card">
+        <a href=${skill.url}><h1>${skill.name}</h1>
+         <img src=${skill.icon}>
+         </div>`).join("")
 }

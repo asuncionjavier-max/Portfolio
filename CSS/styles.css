@@ -147,6 +147,10 @@ h3 {
   font-size: 16px ;
   margin-bottom: 16px;
 }
+a{
+  text-decoration: none;
+  color: var(--blanco);
+}
 
 .skills {
   display: flex;
@@ -364,14 +368,7 @@ img {
     border: none;
     gap:32px
   }
-  .imagen{
-    scale: 1;
-    transition: scale 0.3s;
-    margin-left: 60px;
-  }
-  .imagen:hover{
-    scale: 1.6  ;
-  }
+
   header{
     padding: 10px 64px;
   }
