@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="https://cdn.simpleicons.org/html5">
+    <title>Cheatsheet-html</title>
+</head>
+    <body>
+        <div class="header" id="header"></div>
+    <main>
+        <nav class="cheatsheet-nav">
+            <a href="#estructura">Estructura</a>
+            <a href="#meta">Meta</a>
+            <a href="#texto">Texto</a>
+            <a href="#enlaces">Enlaces</a>
+        </nav>
+        <section>
+            <article class="cs-card" id="estructura">
+                <h2>Estructura</h2>
+                <p>Plantilla recomendada</p>
+                <p><pre>
+                    <code>
+                    &lt;!-- Ejemplo: estructura mínima --&gt; 
+                        &lt;!DOCTYPE html&gt; 
+                            &lt;html lang="es"&gt; 
+                                &lt;head&gt; 
+                                    &lt;meta charset="UTF-8"&gt; 
+                                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; 
+                                     &lt;title&gt;Título&lt;/title&gt; 
+                                &lt;/head&gt; 
+                                &lt;body&gt; 
+                                    &lt;main&gt;Contenido&lt;/main&gt; 
+                                &lt;/body&gt; 
+                        &lt;/html&gt;
+                    </code>
+                </pre></p>
+            </article>
+            <article class="cs-card" id="meta">
+                <h2>Meta</h2>
+                <p>Básicos + seo + redes</p>
+                <p><pre>
+                    <code>
+                        &lt;!-- Configuración de caracteres y vista móvil --&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;meta name="description" content="Descripción clara"&gt;
+
+                        &lt;!-- SEO: Indexación y URL original --&gt;
+                        &lt;meta name="robots" content="index, follow"&gt;
+                        &lt;link rel="canonical" href="https://ejemplo.com/pagina"&gt;
+
+                        &lt;!-- Open Graph: Así se verá en Facebook/WhatsApp --&gt;
+                        &lt;meta property="og:title" content="Título"&gt;
+                        &lt;meta property="og:description" content="Descripción"&gt;
+                        &lt;meta property="og:image" content="https://ejemplo.com/img.jpg"&gt;
+                </code>
+            </pre></p> 
+            </article>
+            <article class="cs-card" id="texto">
+                <h2>Texto</h2>
+                <p>Jerarquia de titulos</p>
+                <p><pre>
+                            <code>
+                        &lt;!-- Jerarquía de encabezados --&gt;
+                        &lt;h1&gt;Título principal&lt;/h1&gt;
+                        &lt;h2&gt;Sección&lt;/h2&gt;
+                        &lt;p&gt;Párrafo normal.&lt;/p&gt;
+
+                        &lt;!-- Estilos de énfasis y resaltado --&gt;
+                        &lt;strong&gt;Importante&lt;/strong&gt;
+                        &lt;em&gt;Énfasis&lt;/em&gt;
+                        &lt;mark&gt;Highlight&lt;/mark&gt;
+
+                        &lt;!-- Código y bloques --&gt;
+                        &lt;code&gt;console.log("inline")&lt;/code&gt;
+                        &lt;pre&gt;Bloque preformateado&lt;/pre&gt;
+                            </code>
+                </pre></p>
+            </article>
+            <article class="cs-card" id="enlaces">
+                <h2>Enlaces</h2>
+                <p><pre>
+                        <code>
+                        &lt;!-- Tipos de enlaces --&gt;
+                        &lt;a href="https://ejemplo.com"&gt;Externo&lt;/a&gt;
+                        &lt;a href="/ruta"&gt;Interno&lt;/a&gt;
+                        &lt;a href="#seccion"&gt;Ancla&lt;/a&gt;
+
+                        &lt;!-- Enlace a nueva pestaña con seguridad --&gt;
+                        &lt;a href="https://ejemplo.com" target="_blank" rel="noopener noreferrer"&gt;
+                        Nueva pestaña (seguro)
+                        &lt;/a&gt;
+
+                        &lt;!-- Estructura de navegación accesible --&gt;
+                        &lt;nav aria-label="Principal"&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/nav&gt;
+                        </code>
+                </pre></p>
+            </article>
+        </section>
+    </main>
+    <div class="footer" id="footer"></div>
+    <script type="module" src="/JS/script.js"></script>    
+ </body>
+</html>

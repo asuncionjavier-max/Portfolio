@@ -115,7 +115,7 @@ header > a:hover{
 /*Main*/
 main {
   padding-top: 70px;
-}
+  }
 .container-about{
   display: flex;
   flex-direction: column;
@@ -208,6 +208,32 @@ a{
   background-color: #353333;
 }
 
+/*CHEATHSHEET*/
+.cheatsheet-nav{
+  background-color: #363636 ;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 60px;
+  gap: 80px;
+  padding: 10px;
+}
+.light-mode .cheatsheet-nav{
+  background-color: aliceblue;
+}
+.cs-card{
+  background-color: var(--gris);
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid #363636;
+  width: 100%;
+  overflow-x: scroll;
+  
+}
+.light-mode .cs-card{
+  background-color: white;
+
+}
 /*ABOUT-ME*/
 .hero{
   display: flex;

@@ -2,7 +2,7 @@ export const cheatsheetLenguajes = [
     {
     name:"HTML5",
     icon:"https://cdn.simpleicons.org/html5",
-    url:"cheatsheet-hmtl.html",
+    url:"cheatsheet-html.html",
 },
 {
     name:"CSS3",
