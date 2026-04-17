@@ -17,7 +17,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--negro);
   color: var(--blanco);
@@ -211,8 +213,8 @@ a{
 /*CHEATHSHEET*/
 .cheatsheet-nav{
   background-color: #363636 ;
-  position: sticky;
-  display: flex;
+  position: non;
+  display: none;
   justify-content: center;
   top: 60px;
   gap: 80px;
@@ -227,7 +229,7 @@ a{
   padding: 15px;
   border: 2px solid #363636;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   
 }
 .light-mode .cs-card{
@@ -434,6 +436,24 @@ img {
   0% {transform: translateX(-60);}
   50%{transform: translateX(120px);}
   100% {transform: translateX(-60px);}
+}
+/*CHEATSHEET*/
+.cheatsheet-nav{
+  background-color: #363636 ;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 60px;
+  gap: 80px;
+  padding: 10px;
+}
+.cs-card{
+  background-color: var(--gris);
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid #363636;
+  width: 100%;
+  
 }
 
 /*SOBRE MI*/

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="https://cdn.simpleicons.org/css">
+    <title>Cheatsheet-CSS</title>
+</head>
+    <body>
+        <div class="header" id="header"></div>
+    <main>
+        <nav class="cheatsheet-nav">
+            <a href="#selectores">Selectores</a>
+            <a href="#texto">Texto</a>
+            <a href="#colores">Colores</a>
+            <a href="#box-model">Box Model</a>
+        </nav>
+        <section>
+            <article class="cs-card" id="selectores">
+                <h2>Selectores Básicos y de Atributo</h2>
+                <p><pre>
+        <code>
+                /* Básicos */
+                * { box-sizing: border-box; }
+                h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+                .destacado { font-weight: 700; }
+                #encabezado { text-align: center; }
+
+                /* Atributo */
+                input[type="text"] { border: 1px solid #ccc; }
+                a[href*="github"] { color: #333; } /* contiene 'github' */
+                    
+                /* Combinadores */
+                article p { line-height: 1.6; }   /* descendiente */
+                nav > ul { list-style: none; }    /* hijo directo */
+                h2 + p { margin-top: 0; }         /* adyacente */
+
+                /* Pseudo-clases y Elementos */
+                a:hover { text-decoration: underline; }
+                li:first-child { font-weight: 700; }
+                ::selection { background: #ffda73; }
+                     </code>
+                </pre></p>
+            </article>
+            <article class="cs-card" id="texto">
+                <h2> Tipografía y Formato de Texto</h2>
+                <p>Define cómo se lee el contenido en tu sitio:</p>
+                    <p><pre><code>
+            /* Texto base optimizado */
+            .texto {
+            font-family: "Lato", system-ui, sans-serif;
+            font-size: 1.1rem; /* Recomendado usar rem */
+            font-weight: 400;
+            line-height: 1.6;  /* Espaciado para mejor lectura */
+            color: #282828;
+            letter-spacing: 0.01em;
+            }
+
+            /* Títulos Responsive con clamp */
+            .titulo {
+            font-size: clamp(1.6rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.1;
+            }
+
+            /* Truco: Cortar texto con puntos suspensivos (...) */
+            .truncado {
+            width: 220px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+                    </code>
+                </pre>
+                </p>
+            </article>
+            <article class="cs-card" id="colores">
+          <h2>Formatos y Estilos Visuales</h2>
+                <p><pre>
+                    <code>
+                    <p>Controla colores, fondos y efectos de profundidad:</p>
+                /* Colores y Sombras */
+                .color  { color: #785082; }
+                .fondo  { background: rgb(240, 180, 0); }
+                .sombra { box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+                /* Fondo con Imagen (Hero) */
+                .hero {
+                background-image: url("ruta/imagen.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover; /* Ajusta la imagen al contenedor */
+                }
+
+                /* Gradientes Modernos */
+                .banner {
+                background: linear-gradient(135deg, #785082, #6990aa);
+                }
+
+                /* Uso de Variables */
+                .btn {
+                color: var(--white);
+                background: var(--secondary);
+                }
+                </code>
+            </pre></p>
+            </article>
+            <article class="cs-card" id="box-model">
+                <h2>Box-Model</h2>
+                <p><pre>
+                        <code>
+                        &lt;!-- Tipos de enlaces --&gt;
+                        &lt;a href="https://ejemplo.com"&gt;Externo&lt;/a&gt;
+                        &lt;a href="/ruta"&gt;Interno&lt;/a&gt;
+                        &lt;a href="#seccion"&gt;Ancla&lt;/a&gt;
+
+                        &lt;!-- Enlace a nueva pestaña con seguridad --&gt;
+                        &lt;a href="https://ejemplo.com" target="_blank" rel="noopener noreferrer"&gt;
+                        Nueva pestaña (seguro)
+                        &lt;/a&gt;
+
+                        &lt;!-- Estructura de navegación accesible --&gt;
+                        &lt;nav aria-label="Principal"&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/nav&gt;
+                        </code>
+                </pre></p>
+            </article>
+        </section>
+    </main>
+    <div class="footer" id="footer"></div>
+    <script type="module" src="/JS/script.js"></script>    
+ </body>
+</html>
